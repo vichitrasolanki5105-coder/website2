@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color:#111827;
+        }
+        nav {
+            width: 100%;
+            height: 75px;
+            background-color: #ffffff;
+
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            padding: 0 60px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        nav h1 {
+            font-size: 28px;
+            color: #111827;
+            margin-right: auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 16px;
+            font-weight:500;
+            transition: 0.3s
+        }
+        nav a:hover{
+            color:#2563eb;
+        }
+
+        nav button {
+            margin-right: 20px;
+            padding: 12px 22px ;
+            background-color: blue;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+            color: white;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+        #nav button:hover{
+            background-color: #2563eb;
+            transform:translateY(-2px)
+        }
+        img{
+            border-radius: 7px;
+            
+        }
+
+        section{
+           background-color: rgb(245, 248, 248);
+           height: 100%;
+        }
+        #div1{
+            display: flex;
+        }
+        div button{
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="nav">
+            <h1>SkillHub</h1>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Courses</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Contact</a>
+
+            <button>Get Started</button>
+        </nav>
+    </header>
+
+    <section id="section">
+        <div id="div1">
+            <div id="div3">
+                <div id="div2">
+                    <h6>Learn-Build-Grow</h6>
+                </div>
+
+                <div>
+                    <h2>Upgrade Your Skills<br> For a Brighter Future</h2>
+
+                    <p>SkillHub provides high-quality, industry-relevant courses to help you <br> learn, build real
+                        projects, and grow your career</p>
+                </div>
+                <div><button>Explore Courses</button></div>
+                <div><button>Watch video</button></div>
+            </div>
+            <div id="img">
+                <img src="./img1.jpeg" alt="img1" width="500px" height="400px">
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

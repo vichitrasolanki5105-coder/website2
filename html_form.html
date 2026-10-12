@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Registration</h1>
+    <form action="/submit" method="get" autocomplete="on">
+        <!-- <label for="FullName">Full Name :</label>
+        <input type="text" id="FullName" name="FullName" placeholder="Enter Your Name"/>
+        <input type="date" id="FullName" name="FullName" placeholder="Enter The Date"/>
+        <input type="time" id="FullName" name="FullName" placeholder="Enter The Time"/> -->
+        <!-- <button type="submit">Submit Button</button> -->
+        <!-- <input type="radio" name="gender" id="male"/>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female"/>
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="other"/>
+        <label for="other">Other</label> -->
+
+        <!-- <label for="city">Select Your City :</label>
+        <select id="city" name="city" multiple size="1">
+            <option value="">--Select City-- </option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            
+        </select> -->
+
+        <!-- <label for="city">City :</label>
+        <input type="text" id="city" name="city" list="cities"/>
+
+        <datalist id="cities">
+            <option value="Delhi">
+            <option value="Mumbai">
+            <option value="Bangalore">
+            <option value="Uttar Pradesh">
+        </datalist> -->
+
+        <!-- <input type="file" name="file" id="file"/> -->
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="Name">Full Name :</label>
+            <input type="text" required placeholder="Enter Your Name" maxlength="50" minlength="3" id="Name" name="Name"/>
+            <br/>
+            <br/>
+            <label for="Email">Email :</label>
+            <input type="email" required placeholder="example@gmail.com" id="Email" name="Email"/>
+            <br/>
+            <br/>
+            <label for="Password">Password ::</label>
+            <input type="password" required placeholder="Enter Your Password" id="Password" name="Password"/>
+            <br/>
+            <br/>
+            <label for="phnumber">Phone Number :</label>
+            <input type="tel" required placeholder="9999999999" id="phnumber" name="phnumber"/>
+            <br/>
+            <br/>
+            <label for="dob">Date of Birth :</label>
+            <input type="date" required id="dob" name="dob"/>
+            <br/>
+            <br/>
+            <label for="time">Preferred Time :</label>
+            <input type="time" required id="time" name="time"/>
+            <p>Gender :</p>
+            <input type="radio" name="gender" id="male"/>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female"/>
+            <label for="female">Female</label> 
+            <input type="radio" name="gender" id="other"/>
+            <label for="other">Other</label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <label for="Course">Select Your Course :</label>
+            <select id="Course" name="Course">
+                <option value="">--Select Course--</option>
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="MCA">MCA</option>
+            </select>
+            <br/>
+            <br/>
+
+            <label for="Skills">Known Programming Languages :</label>
+            <select id="Skills" name="Skills" multiple size="1">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="js">JavaScript</option>
+                <option value="java">Java</option>
+            </select>
+
+            <br/>
+            <br/>
+
+            <label for="age">Age :</label>
+            <input type="Number" id="age" required/>
+            
+            <br/>
+            <br/>
+
+            <label for="prog">Programming Skills :</label>
+            <input type="range" min="0" max="100" value="50"/>
+
+            <br/>
+            <br/>
+
+            <label for="city">City :</label>
+            <input type="text" id="city" name="city" list="cities" required/>
+            <datalist id="cities">
+                <option value="Uttar Pradesh">
+                <option value="Delhi">
+                <option value="Mumbai">
+                <option value="Bangalore">
+                <option value="Chennai">
+                <option value="Harayana">
+            </datalist>
+        </fieldset>
+
+        <fieldset>
+            <legend>Address Information</legend>
+
+            <label for="address">Address :</label><br/>
+            <textarea id="address" name="address" placeholder="Enter Your Address"></textarea>
+            <br/>
+            <br/>
+
+            <label for="pin">Pincode :</label>
+            <input type="number" maxlength="6" minlength="6" id="pin" name="pin" required/>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills & Intrest</legend>
+            <p>Select Your Skills :</p>
+            <input type="checkbox" id="html" name="programming"/>
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="programming"/>
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="programming"/>
+            <label for="js">JavaScript</label>
+            
+            <br/>
+            <br/>
+
+            <label for="portfolio">Portfolio Website :</label>
+            <input type="url" id="porfolio" name="portfolio" placeholder="Enter The Url" required/>
+
+            <br/>
+            <br/>
+
+            <label for="favcolor">Fav Color :</label>
+            <input type="color" id="favcolor" name="favcolor" required/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Files Upload</legend>
+            <label for="resume">Resume :</label>
+            <input type="file" accept=".pdf" required id="resume" name="resume"/>
+            <br/>
+            <br/>
+
+            <label for="img">Image :</label>
+            <input type="file" accept=".jpg, .jpeg, .png" required id="img" name="img"/>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Confirmation</legend>
+            <input type="checkbox" id="confirm" name="confirmation"/>
+            <label for="confirm">I Agree to the terms and conditions</label>
+            <br/>
+            <br/>
+
+            <input type="checkbox" id="subscribe" name="subscribe"/>
+            <label for="subscribe">Subscribe me to the newsletter</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+        </fieldset>
+
+
+    </form>
+</body>
+</html>

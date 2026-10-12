@@ -1,0 +1,109 @@
+body{
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+}
+
+header{
+    height: 180px;
+    padding: 45px;
+    padding-bottom: 0px;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #1e3a5f;
+    border-bottom: 5px solid #f4a261;
+    box-sizing: border-box;
+}
+
+header h1{
+    margin: 0px;
+    front-size: 42px;
+
+}
+
+header p{
+    front-size: 18px;
+
+}
+
+main{
+    width: 90%;
+    margin: 45px auto;
+}
+
+.intro{
+    width: 100%;
+    padding: 25px;
+    background-color:white;
+    border: 2px solid #d9e2ec;
+
+}
+
+.intro h2{
+    front-size: 32px;
+    color: #1e3a5f;
+}
+
+.intro p{
+    color: darkgrey;
+    line-height: 1.6;
+}
+
+.card-section{
+    width: 100%;
+}
+
+.card-section h2{
+    width: 100%;
+    color: #1e3a5f;
+    front-size: 32px;
+    text-align: center;
+}
+
+.cards{
+    display: flex;
+    gap: 50px;
+}
+
+.card{
+    border-top: 10px solid orangered;
+    border-bottom: 2px sold #d9e2ec;
+    border-left: 2px  solid #d9e2ec;
+    border-right: 2px solid #d9e2ec;
+    background-color: white;
+    padding: 30px;
+}
+
+.cards h3{
+    front-size: 25px;
+    color: peru;
+}
+
+.cards p{
+    width: 80%;
+    font-size: 18px;
+    color: gray;
+    line-height: 1.6;
+    margin-bottom: 50px;
+}
+
+.featured{
+    margin-top: 45px;
+    width: auto;
+    background-color: white;
+    border: 2px solid #d9e2ec;
+    padding: 25px;
+    color: white;
+    background-color: #264653;
+    border: 3px solid #2a9d8f;
+}
+
+.featured h2{
+    front-size: 18px;
+
+}
+
+.featured p{
+    font-size: 18px;
+    line-height: 1.6;
+}

@@ -1,0 +1,24 @@
+body{
+    background-color: skyblue;
+}
+
+main{
+    width: 100vw;
+    height: 500px;
+    color: blue;
+    text-align: center;
+}
+
+h1{
+    font-size: 65px;
+    transform: translate(200px);
+    /* transition: transform 3s; */
+    transition-property: transform;
+    transition-duration: 3s;
+    transition-timing-function: ease-in;
+    transition-delay: 5ms;
+}
+
+p{
+    font-size: 25px;
+}
