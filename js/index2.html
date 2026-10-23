@@ -25,10 +25,84 @@
         // funExpression();
 
         // 3.Named Function Expression
-        var namedFunExp = function nameFun(num){
-            return num*num;
+        // var namedFunExp = function nameFun(num){
+        //     return num*num;
+        // }
+        // console.log(namedFunExp(10));
+
+        // 4. Arrow Function
+        // var arrowFun =()=>{
+        //     console.log('we are Working on Arrow Function');
+        // }
+        // arrowFun();
+
+        // 5. Implicit Return in Arrow FUnction
+        // const implicitArrowFun =(num)=> num/10;
+
+        // var devision = implicitArrowFun(100);
+        // console.log(devision);
+
+        // 6. FUnction with multiple parameters
+        // function displayContent(name, age){
+        //     console.log({
+        //         Name: name,
+        //         Age: age
+        //     });
+        // }
+        // displayContent("Vichitra", 19);
+
+        // 7. Arrow Function With Multiple Parameters
+        // var display = (name, age) => {
+        //     console.log({
+        //         Name: name,
+        //         Age: age
+        //     });
+        // };
+        // display("Vichitra", 19);
+
+        // 8. Returning an object from an Arrow Function
+        // var dis = (name, age) => ({ Name: name, Age: age });
+        // console.log(dis('Vichitra', 19));
+
+        // 9. Rest Parameters
+        // function argumentUse(){
+        //     console.log(Aruguments);
+        // }
+        // argumentUse(10,20,'hello');
+
+        // var arguArrow = (...args) => {
+        //     console.log({
+        //         name: args[0],
+        //         class: args[1],
+        //         details: args[2]
+        //     })
+        //     console.log(args.slice(1));
+        // }
+        // arguArrow('xyz','AE','jbj','hub');
+
+        // 10. Default Parameters
+        // function greet(name='Vichitra'){
+        //     console.log("Hello",name);
+        // }
+        // greet();
+        // greet('Solanki');
+
+        // 11. Function Without a Return Statement
+        function fabonacciSeries(){
+            let n=10;
+            var a=0;
+            var b=1;
+            var c=0;
+
+            while(n>0){
+                console.log(a);
+                c=a;
+                a=b;
+                b+=c;
+                n--;
+            }
         }
-        console.log(namedFunExp(10));
+        fabonacciSeries();
     </script>
 </body>
 </html>

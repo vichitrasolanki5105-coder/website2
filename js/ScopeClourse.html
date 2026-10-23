@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. Global Scope
+        var globalVar = 10;
+        const globalConst = 20;
+        let globalLet = 30; 
+
+        function globalScopeCheck(){
+            console.log('var', globalVar);
+            console.log('const', globalConst);
+            console.log('let', globalLet);
+        }
+        globalScopeCheck();
+
+        // 2. Function Scope
+
+        function funscope(){
+            var num = 40;
+            const num1 = 50;
+            let num2 = 60;
+
+            console.log('var', num);
+            console.log('const', num1);
+            console.log('let', num2);
+        }
+        funscope();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
