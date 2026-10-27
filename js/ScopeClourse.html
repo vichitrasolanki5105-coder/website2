@@ -5,30 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        // 1. Global Scope
-        var globalVar = 10;
-        const globalConst = 20;
-        let globalLet = 30; 
+        // 1. scope
+        // 1.1. Global Scope
+        // var globalVar = 10;
+        // const globalConst = 20;
+        // let globalLet = 30; 
 
-        function globalScopeCheck(){
-            console.log('var', globalVar);
-            console.log('const', globalConst);
-            console.log('let', globalLet);
-        }
-        globalScopeCheck();
+        // function globalScopeCheck(){
+        //     console.log('var', globalVar);
+        //     console.log('const', globalConst);
+        //     console.log('let', globalLet);
+        // }
+        // globalScopeCheck();
 
-        // 2. Function Scope
+        // 1.2. Function Scope
 
-        function funscope(){
-            var num = 40;
-            const num1 = 50;
-            let num2 = 60;
+        // function funscope(){
+        //     var num = 40;
+        //     const num1 = 50;
+        //     let num2 = 60;
 
-            console.log('var', num);
-            console.log('const', num1);
-            console.log('let', num2);
-        }
-        funscope();
+        //     console.log('var', num);
+        //     console.log('const', num1);
+        //     console.log('let', num2);
+        // }
+        // funscope();
+
+        // 1.3. Lexical Scope
+        // function outerFun(){
+        //     var a=10;
+        //     const b=20;
+        //     const c=30;
+
+        //     function inner(){
+        //         var innerv = 50;
+
+        //         console.log(a);
+        //         console.log(b);
+        //         console.log(c);
+        //     }
+        //     inner();
+        //     console.log(innerv);
+        // }/
+
+        // 2. clourse\
+        // 2.1 basic clourse
+        // function ouFun(){
+        //     var message = "Hello!, Your Name";
+
+        //     function inFun(){
+        //         console.log(message);
+        //     }
+        //     return inFun;
+        // }
+        // var message=ouFun();
+        // message();
+
+        // 2.1 closure with parameters
+        // function OutCounter(){
+        //     var count = 0;
+        //     function inn(){
+        //         console.log(++count);
+        //     }
+        //     return inn;
+
+        // }
+        // var counter = OutCounter();
+        // counter();
+        // counter();
+
+        // 3. IIFE (Immediately Invoked Function Expression)
+
+        ((name,age)=>{
+            console.log({
+                Name: name,
+                Age: age
+            })
+        })('Vichitra',19);
     </script>
 </head>
 <body>

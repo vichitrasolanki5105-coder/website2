@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        // 1. Array Method
+        var arr = [
+            {
+                id:1,
+                name:"Vichitra Solanki",
+                age:20,
+                email:"vichitrasolanki@gmail.com",
+            },
+            {
+                id:2,
+                name:"Rishabh",
+                age:20,
+                email:"Rishabh@gmail.com",
+            },
+            {
+                id:3,
+                name:"Mayank",
+                age:21,
+                email:"Mayank@gmail.com",
+            },
+            {
+                id:4,
+                name:"Rohit",
+                age:21,
+                email:"rohit@gmail.com",
+            }
+        ];
+
+        // 1.1 FOREACH
+        arr.forEach((data)=>{
+            console.log('forEach name: ', data.name, "Age: ", data.age, "Email: ", data.email);
+        })
+
+        arr.forEach((data,index,arr)=>{
+            console.log('forEach index:', index);
+            console.log('forEach arrr:', arr);
+        })
+
+        // 1.2  Map()
+        // Transform each element and returns a new array.
+        // The callback's returned value becomes a new element.
+        // Does not modify the original array by itself.
+
+        // var obj2=arr.map((data)=>{
+        //     return{...data,age: data.age+1}
+        // })
+        // console.log(obj2);
+
+        // arr.map((data,index,array)=>{
+        //     console.log('map index:', index);
+        //     console.log('map array:', array);
+        // })
+
+        // 1.3 Filter()
+        // Returns a new array containing elements for which.
+        // the callback returns a truthy value.
+
+        var age21 = arr.filter((data)=> data.age === 20);
+        console.log(age21);
+
+        // 1.4 Reduce()
+        // Accumulates array elements into a single result.
+        // The intial value is supplied as the second argumnet.
+
+        console.log(arr.reduce((sum,data)=> sum+Number(data.age)));
+
+        // 1.5 Method Chaining
+        // Chain array methods to filter, transform, and
+        // calculate a result in sequence.
+
+        var arr1=[8,9,55,6,2,52,5,4,5,2,1,7,8,5,9];
+        console.log(arr1.filter((data)=> data%2===0).map((num)=> num+5).reduce((sum,num)=> sum+num));
+
+
+        // 2. Objects
+        // objects store related data using key-value pairs.
+        // The keys are strings, and the values can be any data type.
+        // properties store values, and methods are functions.
+        // associated with ana oblject.
+
+        // Objects.keys(obj_name);
+        // Objects.values(obj_name);
+        // delete obj.keyname;
+
+        // 3. Errors
+        // Errors are problems that occur during parsing
+        // or program execution
+        // syntax error:Invalid javascript syntax.
+        // Refernce error: Accessing an unavailable variable.
+        // Type error: Performing an invalid operation on a value.
+        // Range error: Providing a value outside an allowed range.
+
+        // 3.1 Throw ,Try,catch,finally
+        // try{
+        //     var a =num;
+        //     const num =10;
+        // }catch(e){
+        //     console.error('error',e.message);
+        // }finally{
+        //     console.log("code has been executed");
+        // }
+
+        function ageEligibilty(age){
+            try{
+                if(age<18){
+                    throw new Error("Your age is not as per requirement");
+                }
+                console.log("You are Eligible to give vote");
+            } catch (e){
+                console.error(e.message);
+            } finally{
+                console.log("done");
+            }
+        }
+
+        ageEligibilty(21);
+
+
+        // console mthods
+        // console.log() display values for  inspection
+        // console.error() display error warning
+
+    </script>
+    
+</body>
+</html>
