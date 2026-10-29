@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="heading">Hello</h1>
+
+    <p class="content">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        Esse, culpa? Dolor impedit molestiae harum fuga excepturi ipsum
+        esse nostrum officia magnam vitae, consequuntur, error soluta aliquid
+        laborum architecto provident.
+    </p>
+
+    <p class="content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Similique, quae, et sit labore repellat rerum repellendus nostrum
+        nam officiis commodi, aperiam nulla tenetur.
+    </p>
+
+    <ol id="list">
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+        <li class="item">5</li>
+    </ol>
+
+    <div class="dd">
+        <p>hhh</p>
+    </div>
+
+    <a href="ahjskbsshjk">Google</a>
+
+
+    <script>
+        // 2 SELECTING ELEMENT
+
+        // 2.1 GETELEMENTBYID()
+
+        var h1 = document.getElementById('heading');
+        console.log(h1);
+
+
+        // 2.2 GETELEMENTSBYCLASSNAME()
+
+        var pList = document.getElementsByClassName('content');
+        console.log(pList);
+
+        pList[0].hidden = true;
+
+
+        // 2.3 GETELEMENTSBYTAGNAME()
+        // select elements with the specified tag name
+        // return a live HtmlCollectiom
+
+        console.log(document.getElementsByTagName('p'));
+        console.log(document.getElementsByTagName('h1'));
+
+
+        // 2.4 QUERYSELECTOR()
+        // selects the first element matching a css selector
+        // returns null if no matching element is found
+
+        const ele = document.querySelector('h1');
+        const ele1 = document.querySelector('#heading');
+        const ele2 = document.querySelector('.content');
+
+        console.log(ele);
+        console.log(ele1);
+        console.log(ele2);
+
+
+        // 2.5 QUERYSELECTORALL()
+        // selects all element matching a css selector.
+
+        const ele3 = document.querySelectorAll('.content');
+        console.log(ele3);
+
+
+        // 2.6 Selecting Nested Elements
+
+
+        var ol = document.querySelector('#list');
+        var listItem = ol.querySelectorAll('.item');
+        console.log(listItem);
+
+        // 3. Modifying Element
+        // Dom manipulation allows Javascript to change
+        // webpage content, attributes, styles, and structure.
+
+        // 3.1 InnerHtml
+        // innerHtml gets or sets the Html markup inside an element
+        // Avoid inserting untrusted user input through innerHtml.
+
+        // h1.innerHTML = '<strong><i>Vichitra</i></strong>';
+        // console.log(h1.innerText);
+        h1.innerText = '<i>Hello</i>'  // <i>Hello</i>
+
+        // 3.2 InnerHtml
+
+        h1.innerHTML = '<i>Hello</i>' // Hello(italic)
+
+        // 3.3 TextContent
+        h1.textContent = 'text' // text
+
+        // 3.4 Modifying Styles
+
+        h1.style.color = 'Yellow';
+        h1.style.backgroundColor = 'blue';
+        h1.style['background-color'] = 'red';
+
+        // 3.5 SetAttribute
+
+        // element.getAttribute('attribute_name');
+        var anchor = document.querySelector('a');
+        console.log(anchor);
+        console.log('a href' ,anchor.getAttribute('href'));
+
+        // element.setAttribute('attribute_name','value');
+
+        anchor.setAttribute('href',"https://www.google.com/");
+        anchor.removeAttribute("href");
+
+        // 3.6 ClassList
+        // add() adds a class
+        // remove() adds or remove a class
+        // contains  checks whether a class exist
+
+        console.log(h1.classList);
+        h1.classList.add('head');
+        // h1.classList.remove('head');
+        h1.classList.toggle("header");
+        h1.classList.toggle("head");
+        console.log(h1.classList.contains('header'));
+
+        // 4. Crating and Removing Elements
+
+        var h2 = document.createElement('h2');
+        h2.innerHTML = '<i>Hello</>';
+            
+            var div = document.querySelector('.dd');
+            // div.append(h2);
+            div.prepend(h2);
+
+            // div.remove();
+            // anchor.remove();
+
+        
+    </script>
+
+</body>
+</html>
