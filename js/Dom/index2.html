@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="alert">ALert</button>
+    <button id="prompt">Prompt</button>
+</body>
+<script>
+    function alertButton(){
+        alert("Hello Your Name...");
+    }
+    function promptButton(){
+        prompt("Enter your Name...");
+    }
+
+    var btns = document.querySelectorAll("button");
+    var tbtns = document.getElementsByTagName("button");
+
+    console.log(btns, tbtns);
+    btns[0].innerHTML = "<i>This is a Alert Button</i>";
+    tbtns[1].textContent = "This is a prompt Button";
+
+    var abtn = document.getElementById("alert");
+    var pbtn = document.querySelector("#prompt");
+    console.log(abtn, pbtn);
+
+    abtn.addEventListener('click',alertButton);
+    pbtn.addEventListener('dbclick',promptButton);
+</script>
+</html>
