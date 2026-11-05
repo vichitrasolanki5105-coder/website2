@@ -9,7 +9,7 @@
     <h1>Todo List</h1>
     <form>
         <input type="text" id="input" placeholder="Enter the task" />
-        <button type="submit">Submit</button>
+        <button type="submit">Add Task</button>
     </form>
     <div id="taskCont"></div>
 </body>
@@ -18,11 +18,20 @@
     var input = document.querySelector('#input');
     var taskCont = document.querySelector("#taskCont");
     var tasks = [];
+    var updateIndex = null;
 
     form.addEventListener("submit", (event)=>{
         event.preventDefault();
 
-        tasks.push(input.value);
+        if(updateIndex !== null){
+            tasks[updateIndex] = input.value;
+            updateIndex = null;
+            form.querySelector("button").innerHTML = "Add Task";
+        } else{
+            tasks.push(input.value);
+        }
+
+        // tasks.push(input.value);
         console.log(tasks);
         input.value = "";
         addEle();
@@ -32,8 +41,15 @@
         taskCont.innerHTML = "";
 
         tasks.forEach((data,index)=>{
-            taskCont.innerHTML += `<p>${data}</p> <button onclick="deleteEle(${index})">Delete</button>`;
+            taskCont.innerHTML += `<p>${data}</p> <button onclick="deleteEle(${index})">Delete</button>
+            <button onclick="updateEle(${index})">Edit</button>`;
         });
+    }
+
+    function updateEle(index){
+        input.value=tasks[index];
+        form.querySelector("button").innerHTML = "Update Task";
+        updateIndex = index;
     }
 
     function deleteEle(index){

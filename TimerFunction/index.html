@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="startTimeOut">Start Timerout</button>
+    <button id="EndTimeOut">End Timerout</button>
+    <button id="StartInterval">Start Interval</button>
+    <button id="EndInterval">End Interval</button>
+</body>
+<script>
+    var timeOut = document.querySelector("#startTimeOut");
+    var endTimeOut = document.querySelector("#EndTimeOut");
+    var id= null;
+    var StartInterval = document.querySelector("#StartInterval");
+    var EndInterval = document.querySelector("#EndInterval");
+    var  intervalId;
+
+    // setTimeout(callback_function, delayTime(ms), ags1,arg2,...)
+
+    var fun = (name)=>{
+        console.log("hello", name);
+    };
+    timeOut.addEventListener("click", ()=>{
+        id = setTimeout(fun, 1000, "Vichitra");
+        console.log(id);
+    });
+
+    // timeOut.addEventListener("click", ()=>{
+    //     id = setTimeout((name)=>{
+    //         console.log("hello", name);
+    //     }, 1000, "Vichitra");
+    //     console.log(id);
+    // });
+
+    endTimeOut.addEventListener("click", ()=>{
+        clearTimeout(id);
+    });
+
+    StartInterval.addEventListener("click", ()=>{
+        let count = 0;
+        intervalId = setInterval(()=>{
+            console.log("Interval Running", ++count);
+        }, 2000);
+    });
+
+    EndInterval.addEventListener("click", ()=>{
+        clearInterval(intervalId);
+    });
+
+    // var prom = new Promise((resolve, reject)=>{
+    //     setTimeout(()=>{
+    //         resolve("Content Loaded...");
+    //     }, 3000);
+    // });
+    // prom.then((res)=> console.log(res))
+    // .catch((e)=> console.error(e))
+    // .finally(()=> console.log("done"));
+
+    // var asynFun = async () => {
+    //     await  setTimeout(()=>{
+    //         console.log("Content Loaded...");
+    //     }, 3000);
+    //     await console.log("hello");
+    // };
+    // asynFun();
+
+    console.log(1);
+    setTimeout(()=>{
+        console.log(2);
+    }, 0);
+    // setInterval(()=>{
+    //     console.log(3);
+    // }, 0);
+    
+    new Promise((res,rej)=>{
+        setTimeout(()=>{
+            console.log(4);
+        });
+    });
+    console.log(5);
+
+</script>
+</html>
